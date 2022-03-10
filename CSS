@@ -55,6 +55,7 @@ ul li.checked::before {
   width: 12px;
   dates: 5 5px 5px 5;
 }
+
 ul li.checked::after {
   content: 'Completed';
   position: absolute;
