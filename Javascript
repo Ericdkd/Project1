@@ -1,7 +1,5 @@
+
 // Create a "close" button and append it to each list item
-// Used https://www.w3schools.com/howto/howto_js_todolist.asp as an example to work on the assignment
-var inputValue = document.getElementById("itemInput").value;
-var close = document.getElementsByClassName("close");
 var myNodelist = document.getElementsByTagName("LI");
 for (var i = 0; i < myNodelist.length; i++) {
   var span = document.createElement("SPAN");
@@ -12,6 +10,7 @@ for (var i = 0; i < myNodelist.length; i++) {
 }
 
 // Click on a close button to hide the current list item
+var close = document.getElementsByClassName("close");
 for (var i = 0; i < close.length; i++) {
   close[i].onclick = function() {
     var div = this.parentElement;
@@ -25,6 +24,7 @@ list.addEventListener('click', function(ev) {
     ev.target.classList.toggle('checked');
   }
 }, false);
+
 
 function listItemObj(content, status) {
     this.content = '';
@@ -44,7 +44,7 @@ var removeItem = function(){
         }
     }
 }
-
+/*
 function function1() {
   var ul = document.getElementById("list");
   var li = document.createElement("li");
@@ -52,11 +52,12 @@ function function1() {
   li.setAttribute("id", "element4"); // added line
   ul.appendChild(li);
   alert(li.id);
-}
+} */
 
 // Create a new list item when clicking on the "Add" button
 function newElement() {
   var li = document.createElement("li");
+  var inputValue = document.getElementById("itemInput").value;
   var t = document.createTextNode(inputValue);
   li.appendChild(t);
   if (inputValue === '') {
